@@ -2,7 +2,7 @@ import { Button } from "@material-tailwind/react";
 import { socialRed } from "../../mock/content";
 export default function Footer() {
   return (
-    <footer className="footer p-10 bg-neutral text-neutral-content">
+    <footer className="footer p-10 bg-neutral text-neutral-content bg-principal text-white">
       <div>
         <svg
           width="50"

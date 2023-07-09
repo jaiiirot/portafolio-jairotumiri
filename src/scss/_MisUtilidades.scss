@@ -1,0 +1,23 @@
+$ff-title: "Roboto Slab", serif;
+$ff-text: "Comfortaa", cursive;
+$bg-principal: #15191e;
+$bg-secundario: #2a323c;
+$bg-tercero: #1d232a;
+
+* .my-ff-title {
+  font-family: $ff-title;
+}
+
+* .my-ff-text {
+  font-family: $ff-text;
+}
+
+* .bg-principal {
+  background-color: $bg-principal;
+}
+* .bg-secundario {
+  background-color: $bg-secundario;
+}
+* .bg-tercero {
+    background-color: $bg-secundario;
+  }

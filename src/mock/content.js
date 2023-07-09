@@ -1,6 +1,6 @@
 
 export const pages = [
-  { id: "/", name: "Inicio" },
+  { id: "/jairotumiri/", name: "Inicio" },
   { id: "Portafolio", name: "Portafolio" },
   { id: "Recursos", name: "Mis recursos" },
   { id: "cv", name: "Mi CV" },

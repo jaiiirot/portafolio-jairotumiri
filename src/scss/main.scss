@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 
-$ff-title: 'Roboto Slab', serif;
-$ff-text: 'Comfortaa', cursive;
+@import './MisUtilidades';
 
 * {
   padding: 0;
@@ -12,6 +11,4 @@ $ff-text: 'Comfortaa', cursive;
   box-sizing: border-box;
   font-family: $ff-text;
 }
-
-
-@import './NavBar';
+@import "./NavBar";

@@ -1,0 +1,9 @@
+.my-menu{
+    &-hover{
+        transition: all 200ms ease-in-out;
+        &:hover{
+            background: $bg-secundario;
+            border-radius: 10px;
+        }
+    }
+}
