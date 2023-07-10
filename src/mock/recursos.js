@@ -498,12 +498,6 @@ export const recursos = [
       icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABt0lEQVQ4jY2TvW4TURCFv7m762S9Cy4SpEgWinBLgaiggIIWCYkm6fATUPAAbpBQaorIvAKQhgqJR4AUED8ABVWMYkUo8U92985QeImz9iJlqqt7Z845c2auvIt/tL24N8Au0OR6MQU+BKa9sCzuAq6SYmA6P4oDpPIaA10vjhDYqSsOY8fNTgPzxp+fGZrZMogDdhyQLOtTD+3HCc8/d3j26Q4bd9cv1SxFEtZeGzRaAfFmQDFzRKkDq81ckl4WY4ZZ9c7MakGqChTWNwLuvdxk62ECAkFDuP/qFlsPmgz6I4qpVryoKhDIx4aLhPajuTUSwO0nKZobPluVsALgZ8rh3m+O+ieYBz8zvu0NOeqPML8yibIFY95zSZCdKV9fDzGFi1PP97cn+MwQWRBJSS378cAQSNsRa61gYZ6BawgoqF9IF4HpyDM5zkEgNIUb2xFP32/T6qzN3b7i/j/GSwAnDA8nfHnxi4tTT4iAZsb4uCBKA0z/M/ArAJNhgfqylf3m4BwjiVJHGK+uRV3kY6WYKAjjEDhA6Obn6vKz+n1dlQEIChyEgWnPiwNhF7n2d54AHwPT3l82Ya55mW0IcQAAAABJRU5ErkJggg=="
     },
     {
-      name: "plataforma-beta.coderhouse.com",
-      descripcion: "plataforma-beta.coderhouse.com: Plataforma de educación en línea con cursos de programación, diseño y marketing digital",
-      link: "https://plataforma-beta.coderhouse.com",
-      icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACcklEQVQ4jY2TMUgbYRxH3901JogJ5kqimMRiBTGBKg5iRZNCtXWooIUOgYKlU5cO7gURiiAd6tDBxUFcHEqQwpGqqUPXoIQOkqEiXHKJITanJenFpInXoQqiGfzgbd/7T78ncPN1AE+BEOADasBP4BvwHfjdwAGgCQgDcaACmNcoAgowCgiN5HdAqYF4HQ14cf3Aa+DPLeRLVOAhgLC2ttaladqXg4ODB4qiMD4+jsfjQVEU/H4/brebRCJBpVJhaGiIWq1GNpulr6/v8+Li4iuhWq2+3d/f/yjLsiUajRIMBnE4HGxubjIyMoLNZuPo6AhVVRkcHCSRSOBwOPD7/b/S6fRzUdf1sZWVFUsymWRgYICtrS2SySSyLHNycsL6+joA3d3dLCwsMDMzgyAIRCKRu4VCYfSOpmldsViMnZ0dVldXOT4+xul0YhgG2WyWtrY2Tk9P6e3tZXh4GF3X8fl8NDU1CYFA4L64u7tLLpejubkZq9XK+fk5giBgt9tJpVJ0dnZiGAaSJNHa2kp/fz8ul4uenh6WlpYsoqIoqbm5OWZnZ9F1HafTSbFYxG63k8/nkWUZi8VCPB4nHA5TKpXIZDLk83lM01Sl6enpjqmpqcdnZ2eiz+fD6/WiqiqBQID29nYqlQqSJOHxeGhpaSEUCnF4eIjL5SpMTEx8kCKRSG5+fv5JNBp1e71e9vb22NjYQBRF0uk0y8vLVKtV6vU6pmmiaRrb29uUy+Wvk5OTny6H9AYoi6JoCoJwmyFlgODVJdqA94BxCzkHvGwUk/Vi0j+Avw1Eg/9Fjl2N6UZVwD3gGfAI8AJ1/uccu6Bw9fM/OLIX5RqGpBMAAAAASUVORK5CYII="
-    },
-    {
       name: "tailwindui.com",
       descripcion: "tailwindui.com: Biblioteca de componentes y plantillas de interfaz de usuario construidas con Tailwind CSS",
       link: "https://tailwindui.com",
@@ -550,12 +544,6 @@ export const recursos = [
       descripcion: "bluuweb.github.io: Recursos y tutoriales de programación y desarrollo web en español",
       link: "https://bluuweb.github.io",
       icon: ""
-    },
-    {
-      name: "plataforma-beta.coderhouse.com",
-      descripcion: "plataforma-beta.coderhouse.com: Plataforma de educación en línea con cursos de programación, diseño y marketing digital",
-      link: "https://plataforma-beta.coderhouse.com",
-      icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACcklEQVQ4jY2TMUgbYRxH3901JogJ5kqimMRiBTGBKg5iRZNCtXWooIUOgYKlU5cO7gURiiAd6tDBxUFcHEqQwpGqqUPXoIQOkqEiXHKJITanJenFpInXoQqiGfzgbd/7T78ncPN1AE+BEOADasBP4BvwHfjdwAGgCQgDcaACmNcoAgowCgiN5HdAqYF4HQ14cf3Aa+DPLeRLVOAhgLC2ttaladqXg4ODB4qiMD4+jsfjQVEU/H4/brebRCJBpVJhaGiIWq1GNpulr6/v8+Li4iuhWq2+3d/f/yjLsiUajRIMBnE4HGxubjIyMoLNZuPo6AhVVRkcHCSRSOBwOPD7/b/S6fRzUdf1sZWVFUsymWRgYICtrS2SySSyLHNycsL6+joA3d3dLCwsMDMzgyAIRCKRu4VCYfSOpmldsViMnZ0dVldXOT4+xul0YhgG2WyWtrY2Tk9P6e3tZXh4GF3X8fl8NDU1CYFA4L64u7tLLpejubkZq9XK+fk5giBgt9tJpVJ0dnZiGAaSJNHa2kp/fz8ul4uenh6WlpYsoqIoqbm5OWZnZ9F1HafTSbFYxG63k8/nkWUZi8VCPB4nHA5TKpXIZDLk83lM01Sl6enpjqmpqcdnZ2eiz+fD6/WiqiqBQID29nYqlQqSJOHxeGhpaSEUCnF4eIjL5SpMTEx8kCKRSG5+fv5JNBp1e71e9vb22NjYQBRF0uk0y8vLVKtV6vU6pmmiaRrb29uUy+Wvk5OTny6H9AYoi6JoCoJwmyFlgODVJdqA94BxCzkHvGwUk/Vi0j+Avw1Eg/9Fjl2N6UZVwD3gGfAI8AJ1/uccu6Bw9fM/OLIX5RqGpBMAAAAASUVORK5CYII="
     },
     {
       name: "www.material-tailwind.com",

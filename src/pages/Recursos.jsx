@@ -7,7 +7,7 @@ export default function Recursos() {
         <input
           type="text"
           placeholder="Example: Icon"
-          className="input input-bordered w-full max-w-lg"
+          className="input input-bordered w-full max-w-lg text-white"
         />
       </div>
       <div>

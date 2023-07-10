@@ -10,7 +10,7 @@ export default function NavBarMobile({ socialRed, pages }) {
         </label>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-3"
+          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 gap-3 bg-[#15191E] "
         >
           {pages.map((page, i) => (
             <li key={i}>
