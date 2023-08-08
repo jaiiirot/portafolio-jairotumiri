@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import './MisUtilidades';
+@import "./MisUtilidades";
 
 * {
   padding: 0;
@@ -12,3 +11,5 @@
   font-family: $ff-text;
 }
 @import "./NavBar";
+@import "./Footer";
+@import "./Portafolio";

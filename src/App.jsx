@@ -9,7 +9,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="jairotumiri" element={<ItemLayout />}>
+          <Route path="/" element={<ItemLayout />}>
             <Route index element={<Home />} />
             <Route path="Portafolio/" element={<Portafolio />} />
             <Route path="Recursos/" element={<Recursos />} />

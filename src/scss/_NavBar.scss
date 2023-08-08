@@ -1,9 +1,17 @@
-.my-menu{
-    &-hover{
-        transition: all 200ms ease-in-out;
-        &:hover{
-            background: $bg-secundario;
-            border-radius: 10px;
-        }
+.header {
+  background-color: $color-negrooscuro;
+  color: $color-blanco;
+  height: 9vh;
+  justify-content: space-between;
+  &-menu {
+    gap: 1rem;
+    &-items {
+      transition: all 200ms ease-in-out;
+      padding: 5px 10px;
+      &:hover {
+        background: $color-negrogris;
+        border-radius: 1rem;
+      }
     }
+  }
 }

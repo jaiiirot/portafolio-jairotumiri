@@ -1,16 +1,42 @@
+// import { useEffect, useState } from "react";
+import { skill } from "../mock/content";
 export default function Portafolio() {
+  // const [proyect, setProyect] = useState([]);
+
+  /*   useEffect(() => {
+    const showProyect = async () => {
+      const response = await fetch(
+        "https://api.github.com/users/jairo-tumiri/repos"
+      );
+      const data = await response.json();
+      setProyect(data);
+    };
+    showProyect();
+  }, []);
+  proyect.map((data) => {
+    if (data.name != "portafolio-jairotumiri") console.log(data.name);
+  }); */
+
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Hello there</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
-        </div>
+    <div>
+      <div className="">
+        {skill.map((e, i) => {
+          return (
+            <a
+              href={e.a}
+              key={i}
+              className="my-skills rounded-full"
+              style={{ background: e.style }}
+              target="_blanck"
+            >
+              {/* <img
+                src={e.icon}
+                alt="iconos de las tecnologias que usa la pagina"
+              /> */}
+              <p>{e.name}</p>
+            </a>
+          );
+        })}
       </div>
     </div>
   );

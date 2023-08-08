@@ -11,7 +11,7 @@ export default function Recursos() {
         />
       </div>
       <div>
-        <ItemCardContainer />
+        <ItemCardContainer option="recursos" />
       </div>
     </div>
   );

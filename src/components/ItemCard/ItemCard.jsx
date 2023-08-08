@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import React from "react";
 
-export default function ItemCard({ name, descripcion, icon, link }) {
+export default function ItemCard({ name, descripcion, icon, link, option }) {
   return (
     <>
       <Card className="w-full bg-[#292d32] text-gray-400 h-full hover:bg-[#15191E] my-ff-text p-4 px-6">
@@ -16,6 +16,7 @@ export default function ItemCard({ name, descripcion, icon, link }) {
           onClick={() => window.open(link, "_blank")}
         >
           <CardBody className="p-0">
+            
             <img src={icon} alt={name} className="pb-2" />
             <Typography
               variant="h5"
@@ -27,7 +28,7 @@ export default function ItemCard({ name, descripcion, icon, link }) {
           </CardBody>
           <CardFooter className="p-0 pt-2">
             <Button size="sm" variant="text" className="flex items-center">
-              Usar Recurso
+              Usar Recurso -
             </Button>
           </CardFooter>
         </div>

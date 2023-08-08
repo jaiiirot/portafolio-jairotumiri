@@ -1,8 +1,11 @@
 $ff-title: "Roboto Slab", serif;
 $ff-text: "Comfortaa", cursive;
-$bg-principal: #15191e;
-$bg-secundario: #2a323c;
-$bg-tercero: #1d232a;
+$color-blanco: #fff;
+$color-negrooscuro: #15191e;
+$color-negrogrisoscuro: #1d232a;
+$color-negrogris: #2a323c;
+$color-violeta: #9f006a;
+$color-bordo: #6e0d25;
 
 * .my-ff-title {
   font-family: $ff-title;
@@ -13,11 +16,39 @@ $bg-tercero: #1d232a;
 }
 
 * .bg-principal {
-  background-color: $bg-principal;
+  background-color: $color-negrooscuro;
 }
 * .bg-secundario {
-  background-color: $bg-secundario;
+  background-color: $color-negrogris;
 }
 * .bg-tercero {
-    background-color: $bg-secundario;
+  background-color: $color-negrogris;
+}
+
+* .flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* .flex-center {
+  display: flex;
+  align-items: center;
+}
+
+* .my-skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 5px 10px;
+  img {
+    height: 15px;
   }
+  p {
+    font-size: 0.6rem;
+  }
+}
