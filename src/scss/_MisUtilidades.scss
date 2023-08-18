@@ -6,6 +6,7 @@ $color-negrogrisoscuro: #1d232a;
 $color-negrogris: #2a323c;
 $color-violeta: #9f006a;
 $color-bordo: #6e0d25;
+$color-rosa: #ff0062;
 
 * .my-ff-title {
   font-family: $ff-title;
@@ -57,9 +58,14 @@ $color-bordo: #6e0d25;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  &:hover {
+    text-shadow: none;
+  }
 }
 
 * .btn {
   border-radius: 1rem;
   padding: 4px 16px;
+  box-shadow: 0 0 15px $color-rosa;
+  opacity: 0.6;
 }

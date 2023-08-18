@@ -14,7 +14,7 @@ export default function Home() {
 
   console.log(perfil);
   return (
-    <main className="home flex-center-center">
+    <div className="home flex-center-center">
       <section className="home__present md:w-8/12 flex-center-center">
         <div className="home__presentInfo">
           <div className="home__presentInfoTitle">
@@ -37,7 +37,7 @@ export default function Home() {
                     key={i}
                     href={social.link}
                     target="_blank"
-                    className={`${social.style} flex-center-center`}
+                    className={`${social.style}flex-center-center`}
                   >
                     <i className={social.icon}></i>
                   </a>
@@ -49,7 +49,7 @@ export default function Home() {
         <picture className="home__presentGif">
           <img
             src="https://i.pinimg.com/originals/09/c6/29/09c62903beeba336dc9da76eb5c9a107.gif"
-            alt="gif person-programer"
+            alt="gif-person-programer"
           />
         </picture>
       </section>
@@ -58,9 +58,6 @@ export default function Home() {
           <span>➤</span> PROYECTOS
         </h2>
         <article className="home__proyectItems">
-          
-            
-
           {/* {proyect?.map((e) => (
             <>
               <p>Title</p>
@@ -68,6 +65,6 @@ export default function Home() {
           ))} */}
         </article>
       </section>
-    </main>
+    </div>
   );
 }

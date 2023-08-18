@@ -10,15 +10,17 @@ export default function NavBar() {
 
         <ul className="header-menu hidden md:flex">
           {pages.map((page, i) => (
-            <li key={i} className="header-menu-items">
-              <NavLink to={`${page.id}`}>{page.name}</NavLink>
+            <li key={i}>
+              <NavLink className="header-menu-items" to={`${page.id}`}>
+                {page.name}
+              </NavLink>
             </li>
           ))}
-          <li className="header-menu-items">
+          <li>
             <a
-              href="../../assets/docs/CV - Jhon Jairo Tumiri.pdf"
-              download="CV-Jhon-Jairo-Tumiri.pdf"
-              className=""
+              className="header-menu-items bg-[#ff0062] rounded-2xl shadow-2xl"
+              href="https://drive.google.com/file/d/1q6iARAvzZaq2e91q64qzuxd8bRVClR0y/view?usp=sharing"
+              target="_blank"
             >
               Descargar CV
             </a>
