@@ -1,13 +1,17 @@
 .header {
-  background-color: $color-negrooscuro;
+  // background-color: $color-negrooscuro;
   color: $color-blanco;
-  height: 9vh;
+  height: 10vh;
   justify-content: space-between;
+  &-img {
+    height: 2.4rem;
+  }
   &-menu {
     gap: 1rem;
     &-items {
       transition: all 200ms ease-in-out;
       padding: 5px 10px;
+      font-size: 0.8rem;
       &:hover {
         background: $color-negrogris;
         border-radius: 1rem;

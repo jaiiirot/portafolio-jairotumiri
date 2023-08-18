@@ -1,25 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { recursos } from "../../mock/recursos.js";
 import ItemCard from "./ItemCard";
 
 export default function ItemCardContainer() {
-  const [source, setSource] = useState([]);
   const [watchQuantity, setWatchQuantity] = useState(8);
-
-  const showSource = async () => {
-    const response = await recursos;
-    const sour = await response;
-    setSource(sour);
-  };
-
-  useEffect(() => {
-    showSource();
-  }, []);
 
   return (
     <div className="w-full flex justify-center flex-col items-center">
-      <div className="sm:w-11/12 grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
-        {source.map((e, i) => {
+      <div className="sm:w-11/12 grid gap-4 mt-8 p-2 sm:grid-cols-2 lg:grid-cols-3">
+        {recursos.map((e, i) => {
           if (i < watchQuantity)
             return (
               <div key={i} className="h-full">

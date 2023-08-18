@@ -1,0 +1,70 @@
+.home {
+  flex-direction: column;
+  color: #fff;
+  &__present {
+    height: 70vh;
+    justify-content: space-between;
+    &Info {
+      max-width: 500px;
+      &Title {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        h1 {
+          font-size: 1.5rem;
+        }
+        h3 {
+          font-size: 2.5rem;
+          span {
+            text-shadow: 0 0 20px #ff0062;
+          }
+        }
+      }
+      &Text {
+        max-width: 400px;
+        font-size: 0.9rem;
+        p {
+          margin-bottom: 1rem;
+        }
+        .icon-redes {
+          text-shadow: 0 0 5px #ff0062;
+          height: 3rem;
+          width: 3rem;
+          font-size: 1.5rem;
+          :hover {
+            text-shadow: none;
+          }
+        }
+      }
+    }
+    &Gif {
+      border-radius: 10rem 5rem;
+      overflow: hidden;
+      border: 8px solid #d1d0d0;
+      animation: 800ms ease-in-out 500ms 1 stiker;
+      img {
+        pointer-events: none;
+        box-shadow: 5px 5px 15px #000;
+        height: 20rem;
+      }
+    }
+  }
+
+  &__proyect {
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      span {
+        text-shadow: 0 0 5px #ff0062;
+      }
+    }
+  }
+}
+
+@keyframes stiker {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}

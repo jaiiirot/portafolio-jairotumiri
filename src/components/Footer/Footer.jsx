@@ -1,20 +1,20 @@
 import { socialRed } from "../../mock/content";
 export default function Footer() {
   return (
-    <footer className="w-full bg-principal text-white h-[10vh]">
-      <div className="w-max m-auto h-full flex-center-center gap-2">
-        <span className="footer-title">Jairo Tumiri</span>
-        <div className="flex-center">
-          {socialRed.map((social, i) => {
-            return (
-              <a key={i} href={social.link} target="_blank">
-                <span className={social.style}>
-                  <i className={social.icon}></i>
-                </span>
-              </a>
-            );
-          })}
-        </div>
+    <footer className="w-full text-white h-12 flex-center-center">
+      <div className="flex-center-center gap-4">
+        {socialRed.map((social, i) => {
+          return (
+            <a
+              key={i}
+              href={social.link}
+              target="_blank"
+              className={`${social.style} flex-center-center`}
+            >
+              <i className={social.icon}></i>
+            </a>
+          );
+        })}
       </div>
     </footer>
   );
