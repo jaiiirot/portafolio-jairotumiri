@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react";
-import { socialRed } from "../mock/content";
+import PersonGif from "../assets/img/person.gif";
+import Perfil from "../assets/img/perfil.jpeg";
+import { socialRed, skill } from "../mock/content";
 export default function Home() {
-  const [perfil, setPerfil] = useState([]);
+  const noSkills = ["MongoDB", "Java", "C++", "MySQL", "PHP"];
+  const Skills = skill.map((e) => {
+    if (e.name != noSkills.find((a) => a == e.name)) return e;
+  });
 
-  useEffect(() => {
-    const showPerfil = async () => {
-      const response = await fetch("https://api.github.com/users/jairo-tumiri");
-      const data = await response.json();
-      setPerfil(data);
-    };
-    showPerfil();
-  }, []);
-
-  console.log(perfil);
+  console.log(Skills);
   return (
-    <div className="home flex-center-center">
+    <>
       <section className="home__present md:w-8/12 flex-center-center">
         <div className="home__presentInfo">
           <div className="home__presentInfoTitle">
@@ -46,25 +42,38 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <picture className="home__presentGif">
-          <img
-            src="https://i.pinimg.com/originals/09/c6/29/09c62903beeba336dc9da76eb5c9a107.gif"
-            alt="gif-person-programer"
-          />
+        <picture className="home__presentPerfil">
+          <img src={Perfil} alt="gif-person-programer" />
         </picture>
+      </section>
+      <section className="home__skills md:w-8/12 ">
+        <h2>
+          <span className="totem">➤</span>Mis Skills
+        </h2>
+        <div className="home__skillsAside flex">
+          <picture className="home__skillsAsideGif">
+            <img src={PersonGif} alt="gif-person-programer" />
+          </picture>
+          <div className="home__skillsAsideItems">
+            {Skills.map((e) => {
+              if (e != undefined) {
+                return (
+                  <div key={e.name} className="home__skillsAsideItems--item">
+                    <h4 className="text-xs">{e.name}</h4>
+                    <img src={e.icon} alt={`icon-${e.name}`} className="h-12" />
+                  </div>
+                );
+              }
+            })}
+          </div>
+        </div>
       </section>
       <section className="home__proyect md:w-8/12">
         <h2>
-          <span>➤</span> PROYECTOS
+          <span className="totem">➤</span> PROYECTOS
         </h2>
-        <article className="home__proyectItems">
-          {/* {proyect?.map((e) => (
-            <>
-              <p>Title</p>
-            </>
-          ))} */}
-        </article>
+        <article className="home__proyectItems"></article>
       </section>
-    </div>
+    </>
   );
 }

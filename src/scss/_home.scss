@@ -1,8 +1,6 @@
 .home {
-  flex-direction: column;
-  color: #fff;
   &__present {
-    height: 70vh;
+    height: 80vh;
     justify-content: space-between;
     &Info {
       max-width: 500px;
@@ -33,20 +31,67 @@
         }
       }
     }
-    &Gif {
+    &Perfil {
       border-radius: 10rem 5rem;
       overflow: hidden;
       border: 8px solid #d1d0d0;
       animation: 800ms ease-in-out 500ms 1 stiker;
+      box-shadow: 5px 5px 15px #000;
       img {
         pointer-events: none;
-        box-shadow: 5px 5px 15px #000;
-        height: 20rem;
+        height: 18rem;
+      }
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60vh;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+    &Aside {
+      &Gif {
+        margin: auto 0px;
+        overflow: hidden;
+        height: max-content;
+        width: 40%;
+        img {
+          border-radius: 5rem 10rem;
+          box-shadow: 5px 5px 15px #000;
+          border: 8px solid #d1d0d0;
+          pointer-events: none;
+          height: 15rem;
+        }
+      }
+      &Items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 60%;
+        height: max-content;
+        margin: auto;
+        &--item {
+          margin: auto;
+          width: 80px;
+          h4 {
+            text-align: center;
+            font-weight: 800;
+          }
+          img {
+            margin: auto;
+            width: max-content;
+          }
+        }
       }
     }
   }
 
   &__proyect {
+    height: 70vh;
     h2 {
       font-size: 1.5rem;
       font-weight: 700;

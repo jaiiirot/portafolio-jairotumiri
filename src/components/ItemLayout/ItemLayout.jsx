@@ -5,13 +5,11 @@ import Footer from "../Footer/Footer";
 export default function ItemLayout() {
   return (
     <>
-      <div id="particles-js">
-        <NavBar />
-        <main>
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+      <NavBar />
+      <main className="flex-center-center flex-col text-white">
+        <Outlet />
+      </main>
+      <Footer />
     </>
   );
 }

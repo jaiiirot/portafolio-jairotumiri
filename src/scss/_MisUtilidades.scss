@@ -69,3 +69,9 @@ $color-rosa: #ff0062;
   box-shadow: 0 0 15px $color-rosa;
   opacity: 0.6;
 }
+
+* .totem {
+  margin-right: 1rem;
+  text-shadow: 0px 0px 15px $color-rosa;
+  color: $color-rosa;
+}
