@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import PersonGif from "../assets/img/person.gif";
 import Perfil from "../assets/img/perfil.jpeg";
 import { socialRed, skill } from "../mock/content";
@@ -11,7 +11,7 @@ export default function Home() {
   console.log(Skills);
   return (
     <>
-      <section className="home__present md:w-8/12 flex-center-center">
+      <section className="home__present flex-center-center">
         <div className="home__presentInfo">
           <div className="home__presentInfoTitle">
             <h2>Hola, soy </h2>
@@ -46,7 +46,7 @@ export default function Home() {
           <img src={Perfil} alt="gif-person-programer" />
         </picture>
       </section>
-      <section className="home__skills md:w-8/12 ">
+      <section className="home__skills">
         <h2>
           <span className="totem">➤</span>Mis Skills
         </h2>
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="home__proyect md:w-8/12">
+      <section className="home__proyect flex">
         <h2>
           <span className="totem">➤</span> PROYECTOS
         </h2>

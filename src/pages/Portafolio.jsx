@@ -1,25 +1,9 @@
 // import { useEffect, useState } from "react";
 import { skill } from "../mock/content";
 export default function Portafolio() {
-  // const [proyect, setProyect] = useState([]);
-
-  /*   useEffect(() => {
-    const showProyect = async () => {
-      const response = await fetch(
-        "https://api.github.com/users/jairo-tumiri/repos"
-      );
-      const data = await response.json();
-      setProyect(data);
-    };
-    showProyect();
-  }, []);
-  proyect.map((data) => {
-    if (data.name != "portafolio-jairotumiri") console.log(data.name);
-  }); */
-
   return (
-    <div>
-      <div className="">
+    <>
+      <section className="">
         {skill.map((e, i) => {
           return (
             <a
@@ -37,7 +21,7 @@ export default function Portafolio() {
             </a>
           );
         })}
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

@@ -6,7 +6,7 @@ export default function ItemLayout() {
   return (
     <>
       <NavBar />
-      <main className="flex-center-center flex-col text-white">
+      <main className="text-white m-auto flex-center-center flex-col">
         <Outlet />
       </main>
       <Footer />

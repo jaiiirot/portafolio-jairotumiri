@@ -1,6 +1,13 @@
 .home {
+  &__present,
+  &__skills,
+  &__proyect {
+    max-width: 768px;
+    padding: 0px 18px;
+    margin: 2rem 0px;
+    height: max-content;
+  }
   &__present {
-    height: 80vh;
     justify-content: space-between;
     &Info {
       max-width: 500px;
@@ -32,14 +39,13 @@
       }
     }
     &Perfil {
-      border-radius: 10rem 5rem;
-      overflow: hidden;
-      border: 8px solid #d1d0d0;
-      animation: 800ms ease-in-out 500ms 1 stiker;
-      box-shadow: 5px 5px 15px #000;
       img {
+        animation: 800ms ease-in-out 500ms 1 stiker;
+        border-radius: 10rem 5rem;
+        box-shadow: 5px 5px 15px #000;
+        border: 8px solid #d1d0d0;
+        width: 400px;
         pointer-events: none;
-        height: 18rem;
       }
     }
   }
@@ -47,16 +53,13 @@
   &__skills {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 60vh;
+    gap: 2rem;
     h2 {
       font-size: 1.5rem;
       font-weight: 800;
     }
     &Aside {
       &Gif {
-        margin: auto 0px;
-        overflow: hidden;
         height: max-content;
         width: 40%;
         img {
@@ -91,7 +94,6 @@
   }
 
   &__proyect {
-    height: 70vh;
     h2 {
       font-size: 1.5rem;
       font-weight: 700;
@@ -108,5 +110,80 @@
   }
   to {
     transform: rotateY(-360deg);
+  }
+}
+
+@media (max-width: 750px) {
+  .home {
+    &__present,
+    &__skills,
+    &__proyect {
+      max-width: 420px;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    &__present {
+      flex-direction: column;
+      &Info {
+        width: 100%;
+      }
+      &Perfil {
+        img {
+          max-width: 300px;
+        }
+      }
+    }
+    &__skills {
+      &Aside {
+        flex-direction: column-reverse;
+        &Items,
+        &Gif {
+          width: 100%;
+          padding: 0.5rem 0px;
+          margin: auto;
+        }
+        &Gif {
+          img {
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .home {
+    &__present,
+    &__skills,
+    &__proyect {
+      padding: 0px 1rem;
+    }
+    &__present {
+      gap: 1.2rem;
+      .icon-redes {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.5rem;
+        &:hover {
+          background: none;
+        }
+      }
+      h1 {
+        font-size: 1.2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      &Perfil {
+        height: auto;
+        img {
+          max-width: 200px;
+        }
+      }
+    }
   }
 }
