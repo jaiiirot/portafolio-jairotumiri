@@ -2,13 +2,12 @@
 import PersonGif from "../assets/img/person.gif";
 import Perfil from "../assets/img/perfil.jpeg";
 import { socialRed, skill } from "../mock/content";
+import ItemCardContainer from "../components/ItemCard/ItemCardContainer";
 export default function Home() {
   const noSkills = ["MongoDB", "Java", "C++", "MySQL", "PHP"];
   const Skills = skill.map((e) => {
     if (e.name != noSkills.find((a) => a == e.name)) return e;
   });
-
-  console.log(Skills);
   return (
     <>
       <section className="home__present flex-center-center">
@@ -68,11 +67,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="home__proyect flex">
+      <section className="home__proyect">
         <h2>
-          <span className="totem">➤</span> PROYECTOS
+          <span className="totem">➤</span> Proyectos
         </h2>
-        <article className="home__proyectItems"></article>
+        <article className="home__proyectItems">
+          <div className="home__proyectItemsItem">
+            <ItemCardContainer />
+          </div>
+        </article>
       </section>
     </>
   );

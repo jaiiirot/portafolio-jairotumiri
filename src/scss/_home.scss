@@ -4,8 +4,8 @@
   &__proyect {
     max-width: 768px;
     padding: 0px 18px;
-    margin: 2rem 0px;
     height: max-content;
+    margin: 2rem 0px;
   }
   &__present {
     justify-content: space-between;
@@ -94,6 +94,8 @@
   }
 
   &__proyect {
+    display: flex;
+    flex-direction: column;
     h2 {
       font-size: 1.5rem;
       font-weight: 700;
