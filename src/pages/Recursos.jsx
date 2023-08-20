@@ -9,13 +9,13 @@ export default function Recursos() {
             <span className="totem">➤</span>RECURSOS
           </h2>
           <p>
-            Si viste en mis Proyectos herramientas que te gustaron o algo
-            parecido, aca abajo te dejo las herramientas que uso usualmente 🙂.
+            Si viste en mis Proyectos herramientas que te gustaron o te
+            intereso, aca abajo te dejo las herramientas que uso usualmente 🙂.
           </p>
           <input type="search" placeholder="Ejemplo: Icons" />
         </div>
         <div className="recursos__itemsItem">
-          <ItemCardContainer option="recursos" />
+          <ItemCardContainer option="resour" />
         </div>
       </section>
     </>

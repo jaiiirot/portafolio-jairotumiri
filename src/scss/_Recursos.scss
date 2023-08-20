@@ -38,3 +38,50 @@
     }
   }
 }
+
+@media (max-width: 750px) {
+  .recursos {
+    &__items {
+      max-width: 768px;
+      padding: 0px 18px;
+      height: max-content;
+    }
+    &__items {
+      &Search {
+        h2 {
+          font-size: 1.5rem;
+        }
+        p,
+        input {
+          max-width: 350px;
+          p {
+            font-size: 0.9rem;
+          }
+        }
+        &Item {
+          .containerItems {
+            width: 100%;
+            &Item {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .recursos {
+    &__items {
+      &Search {
+        p,
+        input {
+          width: 250px;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

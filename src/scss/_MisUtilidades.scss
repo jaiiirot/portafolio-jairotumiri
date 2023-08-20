@@ -83,11 +83,11 @@ $color-rosa: #ff0062;
   margin: 1rem 0px;
   flex-direction: column;
   gap: 1rem;
-  cursor: pointer;
   &Item {
     display: grid;
     gap: 1rem;
     &--item {
+      cursor: pointer;
       transition: all 8ms ease;
       width: 100%;
       background: $color-negrogrisoscuro;
@@ -113,6 +113,52 @@ $color-rosa: #ff0062;
     border-radius: 1rem;
     &:hover {
       background: $color-negrogrisoscuro;
+    }
+  }
+}
+
+* .item-card-project {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 50px;
+  &-relative {
+    position: relative;
+    span {
+      transition: all 200ms ease-in-out;
+      background: #000000bd;
+      backdrop-filter: blur(2px);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      div {
+        transition: all 200ms ease-in-out;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+      }
+    }
+    &:hover {
+      span {
+        backdrop-filter: blur(0px);
+        div {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &-option {
+    padding: 0.5rem 0px;
+    background: #12151a;
+    a {
+      i {
+        font-size: 1.2rem;
+      }
     }
   }
 }

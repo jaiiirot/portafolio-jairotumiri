@@ -3,10 +3,12 @@ import Home from "./pages/Home";
 import Portafolio from "./pages/Portafolio";
 import Recursos from "./pages/Recursos";
 import ItemLayout from "./components/ItemLayout/ItemLayout";
+import { ParticlesBackground } from "./components/ParticlesBackground/ParticlesBackground";
 
 export default function App() {
   return (
     <>
+      <ParticlesBackground />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ItemLayout />}>

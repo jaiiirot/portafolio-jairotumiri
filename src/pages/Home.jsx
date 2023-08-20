@@ -73,7 +73,7 @@ export default function Home() {
         </h2>
         <article className="home__proyectItems">
           <div className="home__proyectItemsItem">
-            <ItemCardContainer />
+            <ItemCardContainer option="project" />
           </div>
         </article>
       </section>

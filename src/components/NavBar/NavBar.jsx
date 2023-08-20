@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function NavBar() {
   return (
     <nav className="flex-center-center">
-      <div className="header flex-center px-4 w-full sm:w-8/12">
+      <div className="header flex-center px-4 w-full md:max-w-[768px]">
         <NavBarMobile pages={pages} />
 
         <ul className="header-menu hidden md:flex">
