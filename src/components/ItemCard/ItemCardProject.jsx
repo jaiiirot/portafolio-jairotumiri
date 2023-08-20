@@ -4,6 +4,7 @@ export default function ItemCardProject({ project }) {
     <>
       {project.map((element, i) => {
         const { img, name, link, info, skills, github } = element;
+        const contSkill = skills.split(",");
         return (
           <div key={`${i}-${name}`} className="item-card-project">
             <div className="item-card-project-relative">
@@ -12,19 +13,22 @@ export default function ItemCardProject({ project }) {
               </picture>
               <span className="flex-center-center flex-col">
                 <h4>{name}</h4>
-                <div className="">
-                  {skill.map((e, i) => {
-                    return (
-                      <a
-                        href={e.a}
-                        key={i}
-                        className="my-skills rounded-full"
-                        style={{ background: e.style }}
-                        target="_blanck"
-                      >
-                        <p>{e.name}</p>
-                      </a>
-                    );
+                <div className="flex-center-center">
+                  {skill.map((ico, i) => {
+                    console.log(ico.name.includes(contSkill.map((e) => e)));
+                    if (
+                      ico.name == contSkill.find((desIco) => desIco == ico.name)
+                    )
+                      return (
+                        <a
+                          key={i}
+                          className="my-skills rounded-full"
+                          style={{ background: ico.style }}
+                          target="_blanck"
+                        >
+                          <p>{ico.name}</p>
+                        </a>
+                      );
                   })}
                 </div>
               </span>

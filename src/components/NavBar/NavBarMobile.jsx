@@ -6,7 +6,6 @@ export default function NavBarMobile({ pages }) {
   const handClick = () => {
     setActive(!active);
   };
-  console.log(active);
   return (
     <div className="flex justify-between w-full md:w-max">
       <NavLink to={`/`} className="">
