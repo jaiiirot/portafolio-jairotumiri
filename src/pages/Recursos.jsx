@@ -15,7 +15,7 @@ export default function Recursos() {
           <input type="search" placeholder="Ejemplo: Icons" />
         </div>
         <div className="recursos__itemsItem">
-          <ItemCardContainer option="resour" />
+          <ItemCardContainer option="resour" quantity={2} />
         </div>
       </section>
     </>

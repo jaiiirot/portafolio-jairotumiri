@@ -1,7 +1,7 @@
 export const pages = [
   { id: "/", name: "Inicio" },
-  { id: "Portafolio", name: "Portafolio" },
-  { id: "Recursos", name: "Recursos" },
+  { id: "portafolio", name: "Portafolio" },
+  { id: "recursos", name: "Recursos" },
   // { id: "Documentacion", name: "Documentacion" },
 ];
 export const socialRed = [
