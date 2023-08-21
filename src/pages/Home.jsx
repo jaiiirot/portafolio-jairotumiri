@@ -6,8 +6,9 @@ import ItemCardContainer from "../components/ItemCard/ItemCardContainer";
 export default function Home() {
   const noSkills = ["MongoDB", "Java", "C++", "MySQL", "PHP"];
   const Skills = skill.map((e) => {
-    if (e.name != noSkills.find((a) => a == e.name)) return e;
+    if (e.name !== noSkills.find((a) => a === e.name)) return e;
   });
+
   return (
     <>
       <section className="home__present flex-center-center">
@@ -55,14 +56,14 @@ export default function Home() {
           </picture>
           <div className="home__skillsAsideItems">
             {Skills.map((e) => {
-              if (e != undefined) {
-                return (
-                  <div key={e.name} className="home__skillsAsideItems--item">
-                    <h4 className="text-xs">{e.name}</h4>
-                    <img src={e.icon} alt={`icon-${e.name}`} className="h-12" />
-                  </div>
-                );
-              }
+              /* codicion / escape */
+              if (e === undefined) return;
+              return (
+                <div key={e.name} className="home__skillsAsideItems--item">
+                  <h4 className="text-xs">{e.name}</h4>
+                  <img src={e.icon} alt={`icon-${e.name}`} className="h-12" />
+                </div>
+              );
             })}
           </div>
         </div>
@@ -73,10 +74,19 @@ export default function Home() {
         </h2>
         <article className="home__proyectItems">
           <div className="home__proyectItemsItem">
-            <ItemCardContainer option="project" />
+            <ItemCardContainer option="project" quantity={2} />
           </div>
         </article>
       </section>
     </>
   );
 }
+
+
+
+/* SLCX => paquete conprueba true false */
+/* 
+funcional programing
+mutar un dato de useState
+manejar bien los hooks
+*/

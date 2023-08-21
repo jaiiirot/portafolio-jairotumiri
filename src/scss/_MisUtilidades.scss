@@ -122,6 +122,7 @@ $color-rosa: #ff0062;
   overflow: hidden;
   border-radius: 50px;
   &-relative {
+    overflow: hidden;
     position: relative;
     span {
       transition: all 200ms ease-in-out;
@@ -132,7 +133,8 @@ $color-rosa: #ff0062;
       position: absolute;
       top: 0;
       h4 {
-        font-size: 1.5rem;
+        text-align: center;
+        font-size: 1.2rem;
         font-weight: 700;
       }
       div {
@@ -141,6 +143,9 @@ $color-rosa: #ff0062;
         display: flex;
         flex-wrap: wrap;
         gap: 0.25rem;
+      }
+      &-len {
+        font-size: 0.1rem;
       }
     }
     &:hover {

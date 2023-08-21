@@ -4,7 +4,7 @@ export default function Portafolio() {
   return (
     <>
       <section className="max-w-[768px]">
-        <ItemCardContainer option="project" />
+        <ItemCardContainer option="project" quantity={3} />
       </section>
     </>
   );
