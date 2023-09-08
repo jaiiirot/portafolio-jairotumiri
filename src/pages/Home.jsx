@@ -11,13 +11,13 @@ export default function Home() {
 
   return (
     <>
-      <section className="home__present flex-center-center">
+      <section className="home__present">
         <div className="home__presentInfo">
           <div className="home__presentInfoTitle">
-            <h2>Hola, soy </h2>
             <h1>Jhon Jairo Tumiri</h1>
             <h3>
-              Soy desarrollador web
+              Desarrollador
+              <br />
               <span className="text-[#ff0062]"> Front-End</span>
             </h3>
           </div>
@@ -81,8 +81,6 @@ export default function Home() {
     </>
   );
 }
-
-
 
 /* SLCX => paquete conprueba true false */
 /* 

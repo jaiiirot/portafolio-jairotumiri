@@ -8,7 +8,9 @@
     margin: 2rem 0px;
   }
   &__present {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     &Info {
       max-width: 500px;
       &Title {
@@ -44,7 +46,7 @@
         border-radius: 10rem 5rem;
         box-shadow: 5px 5px 15px #000;
         border: 8px solid #d1d0d0;
-        width: 400px;
+        width: 300px;
         pointer-events: none;
       }
     }
