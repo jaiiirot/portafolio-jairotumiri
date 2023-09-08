@@ -9,7 +9,7 @@ export const socialRed = [
     name: "Linkedin",
     icon: "fa-brands fa-linkedin ",
     style: "icon-redes hover:bg-[#4485edab] ",
-    link: "https://www.linkedin.com/in/jhon-jairo-tumiri/",
+    link: "https://www.linkedin.com/in/jairotumiri/",
   },
   {
     name: "GitHub",
