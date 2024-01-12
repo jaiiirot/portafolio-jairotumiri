@@ -19,7 +19,7 @@ export default function NavBar() {
           <li>
             <a
               className="header-menu-items bg-[#ff0062] rounded-2xl shadow-2xl"
-              href="https://drive.google.com/file/d/1q6iARAvzZaq2e91q64qzuxd8bRVClR0y/view?usp=sharing"
+              href="https://drive.google.com/file/d/1boa1dlj9_QCWrMg7xp8qviFtYf31Az3i/view?usp=sharing"
               target="_blank"
             >
               Descargar CV

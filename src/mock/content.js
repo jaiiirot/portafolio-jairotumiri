@@ -23,12 +23,6 @@ export const socialRed = [
     style: " icon-redes hover:bg-[#ec4899ab] ",
     link: "https://www.instagram.com/jaiiirot/",
   },
-  /*   {
-    name: "Facebook",
-    icon: "fa-brands fa-facebook",
-    style: " icon-redes hover:bg-[#1e40afab] ",
-    link: "https://www.facebook.com/tumirijhon",
-  }, */
   {
     name: "Twitter",
     icon: "fa-brands fa-twitter",
