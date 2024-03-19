@@ -1,7 +1,7 @@
 const hostLink =
-  "https://raw.githubusercontent.com/Jairo-Tumiri/portafolio-jairotumiri/main/src/assets/pages/";
-const hostWeb = "https://raw.githubusercontent.com/Jairo-Tumiri/";
-const pagesPortafolio = [
+  "/";
+// const hostWeb = "https://raw.githubusercontent.com/Jairo-Tumiri/";
+export const pagesPortafolio = [
   {
     img: `${hostLink}ik.png`,
     // gif: `${hostWeb}store-ik/main/src/asset/video/gif.gif`,
@@ -48,5 +48,3 @@ const pagesPortafolio = [
     github: "https://github.com/Jairo-Tumiri/web-acatraz",
   },
 ];
-
-export default pagesPortafolio;
