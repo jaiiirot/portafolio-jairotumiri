@@ -1,6 +1,4 @@
-const hostLink =
-  "/";
-// const hostWeb = "https://raw.githubusercontent.com/Jairo-Tumiri/";
+const hostLink = "/";
 export const pagesPortafolio = [
   {
     img: `${hostLink}ik.png`,
