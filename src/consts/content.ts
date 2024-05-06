@@ -120,11 +120,4 @@ export const skill = [
     style: "#00549Dd9",
     a: "https://www.w3schools.com/php/default.asp",
   },
-  {
-    name: "Express",
-    icon: `${linkHost}php.png`,
-    category: "back-end",
-    style: "#00549Dd9",
-    a: "https://www.w3schools.com/php/default.asp",
-  },
 ];
