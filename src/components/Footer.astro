@@ -1,0 +1,29 @@
+---
+import { socialRed } from "../consts/social";
+---
+
+<footer class="absolute bottom-0 w-full text-gray-300 p-4">
+  <div class="flex w-10/12 m-auto justify-between items-center text-xs flex-col-reverse sm:text-sm sm:flex-row">
+    <div>
+      <h4>
+        ©
+        <a href="https://github.com/jaiiirot">Jairo Tumiri</a>
+      </h4>
+    </div>
+    <div class="flex gap-6 flex-col sm:flex-row">
+      {
+        socialRed.map((e) => {
+          return (
+            <a
+              href={e.link}
+              class="font-semibold hover:text-white hover:opacity-50 duration-200"
+              target="_blank"
+            >
+              {e.name} ↗︎
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</footer>

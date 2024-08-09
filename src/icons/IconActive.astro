@@ -1,0 +1,35 @@
+---
+
+---
+
+<div class="active-green"></div>
+
+<style>
+  .active-green {
+    background: #00ff73;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+
+  .active-green::before {
+    content: "";
+    animation: tik 1s 0s infinite linear;
+  }
+
+  @keyframes tik {
+    from {
+      opacity: 0;
+      box: #00ff73 5px 5px 10px 12px;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    to {
+      box-shadow: #00ff73 5px 5px 10px 12px;
+      opacity: 0;
+    }
+  }
+</style>

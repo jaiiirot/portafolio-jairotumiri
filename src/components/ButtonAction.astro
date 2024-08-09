@@ -1,0 +1,96 @@
+---
+interface Props {
+  text: string;
+  color: number;
+  href: string;
+  className: string;
+}
+
+const { text, color, href, className } = Astro.props;
+const colors = [
+  { bg: "#000", tx: "#fff" },
+  { bg: "#fff", tx: "#000" },
+];
+const { bg, tx } = colors[color];
+---
+
+<a href={href} target="_blank">
+  <button
+    class=`button-personalized ${className}`
+    style=`background: ${bg}; color: ${tx}`
+  >
+    <span class=`flex gap-2 justify-center items-center font-semibold`>
+      <slot />
+      <p>{text}</p>
+    </span>
+  </button>
+</a>
+
+<style>
+  .button-personalized {
+    position: relative;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+
+  .button-personalized:hover {
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+
+  .button-personalized:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+
+  .button-personalized::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+
+  .button-personalized:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+</style>
