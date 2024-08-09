@@ -1,0 +1,68 @@
+---
+import ButtonAction from "../components/ButtonAction.astro";
+import Layout from "../layouts/Layout.astro";
+import IconCv from "../icons/IconCv.astro";
+// import IconActive from "../icons/IconActive.astro";
+import IconFlagArg from "../icons/IconFlagArg.astro";
+---
+
+<Layout title="Jairo Tumiri">
+  <main class="text-white">
+    <section
+      class="flex flex-col justify-center items-center gap-5 mt-12"
+    >
+      <div class="flex flex-col gap-3 text-center font-bold">
+        <h1 class="text-7xl family-title">Jairo Tumiri</h1>
+        <h2 class="text-4xl">
+          Desarrollador <span class="text-[#FF003D]" style="text-shadow: 2px 2px 15px #ff003d;">Full Stack</span
+          >
+        </h2>
+        <p class="font-light">
+          Fusionando creatividad y tecnología para ofrecer soluciones que
+          inspiran
+        </p>
+      </div>
+      <hr
+        class="w-6/12 m-auto opacity-15"
+        style=" border-top: 2px dotted white;background: transparent;"
+      />
+      <div class="flex flex-col gap-3 justify-center items-center">
+        <!-- <ButtonAction text="Disponible para nuevos proyectos" color={1} className="text-xs" href="https://www.linkedin.com/in/jairotumiri/">
+          <IconActive />
+        </ButtonAction> -->
+        <h3 class="flex justify-center items-center gap-4">
+          Me encuentro en Buenos Aires, Argentina <IconFlagArg />
+        </h3>
+        <span class="flex gap-2">⌛<div id="hora"></div>(GMT-3)</span>
+      </div>
+      <hr
+        class="w-6/12 m-auto opacity-15"
+        style=" border-top: 2px dotted white;background: transparent;"
+      />
+      <div class="m-auto flex gap-4">
+        <ButtonAction text="Descargar Curriculum" color={0} className="text-lg border" href="https://drive.google.com/file/d/146nRdfRrWB31rr8p5kIuq-pTg0fIJedy/view?usp=sharing">
+          <IconCv />
+        </ButtonAction>
+        <ButtonAction text="Contactar" color={1} className="text-lg border" href='?push=form'/>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  function actualizarHora() {
+    const fechaActual = new Date();
+    const horaArgentina = new Intl.DateTimeFormat("es-AR", {
+      timeZone: "America/Argentina/Buenos_Aires",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    }).format(fechaActual);
+    const horaElement = document.getElementById("hora");
+    if (horaElement) {
+      horaElement.innerText = horaArgentina;
+    }
+  }
+  setInterval(actualizarHora, 1000);
+  actualizarHora();
+</script>
