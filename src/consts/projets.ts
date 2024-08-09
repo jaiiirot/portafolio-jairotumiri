@@ -1,11 +1,7 @@
 const hostLink =
   "https://raw.githubusercontent.com/jaiiirot/portafolio-jairotumiri/main/src/assets/pages/";
-<<<<<<< HEAD:src/mock/pagesPortafolio.js
-const pagesPortafolio = [
-=======
 
-  export const Projets = [
->>>>>>> dev-test:src/consts/projets.ts
+export const Projets = [
   {
     img: `${hostLink}ik.jpg`,
     name: "Indumentaria Kevin",
