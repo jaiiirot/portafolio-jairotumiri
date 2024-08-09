@@ -3,18 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-=======
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
->>>>>>> dev-test
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
