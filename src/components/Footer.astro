@@ -2,15 +2,15 @@
 import { socialRed } from "../consts/social";
 ---
 
-<footer class="absolute bottom-0 w-full text-gray-300 p-4">
-  <div class="flex w-10/12 m-auto justify-between items-center text-xs flex-col-reverse sm:text-sm sm:flex-row">
+<footer class="w-full text-gray-300 p-4">
+  <div class="flex gap-6 w-10/12 m-auto justify-between items-center text-xs flex-col-reverse sm:text-sm sm:flex-row">
     <div>
       <h4>
         ©
         <a href="https://github.com/jaiiirot">Jairo Tumiri</a>
       </h4>
     </div>
-    <div class="flex gap-6 flex-col sm:flex-row">
+    <div class="flex gap-6 flex-wrap justify-center items-center">
       {
         socialRed.map((e) => {
           return (
