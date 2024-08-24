@@ -1,0 +1,55 @@
+---
+import ButtonAction from "../components/ButtonAction.astro";
+import Layout from "../layouts/Layout.astro";
+import IconCv from "../icons/IconCv.astro";
+import IconActive from "../icons/IconActive.astro";
+---
+
+<Layout title="404">
+  <main class="text-white">
+    <section class="flex flex-col justify-center items-center h-screen">
+      <div class="flex flex-col gap-3 text-center font-bold">
+        <h1 class="text-4xl family-title">Jairo Tumiri</h1>
+        <h2 class="text-2xl">
+          Desarrollador <span
+            class="text-[#FF003D]"
+            style="text-shadow: 2px 2px 15px #ff003d;">Full Stack</span
+          >
+        </h2>
+      </div>
+      <hr
+        class="w-6/12 m-3 opacity-15"
+        style=" border-top: 2px dotted white;background: transparent;"
+      />
+      <div class="flex flex-col gap-3 justify-center items-center">
+        <h2 class="text-2xl sm:text-6xl font-bold">
+          Error <span
+            class="text-[#FF003D]"
+            style="text-shadow: 2px 2px 15px #ff003d;">404</span
+          >
+        </h2>
+        <p class="w-11/12 text-center text-xs sm:w-6/12 sm:text-base">
+          No se existe o no se puede entrar a este contenido, desde ya muchas
+          gracias por visitar la pagina y te seleccionamos otras paginas para
+          visitar
+        </p>
+      </div>
+      <hr
+        class="w-6/12 m-3 opacity-15"
+        style=" border-top: 2px dotted white;background: transparent;"
+      />
+      <div
+        class="m-3 flex flex-col gap-4 justify-center items-center sm:flex-row"
+      >
+        <ButtonAction
+          text="Proyectos"
+          color={0}
+          className="text-sm sm:text-lg border border-gray-800"
+          href="/proyectos"
+        />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script></script>
