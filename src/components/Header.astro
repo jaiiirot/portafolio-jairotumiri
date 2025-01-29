@@ -1,27 +1,92 @@
 ---
-import ButtonAction from './ButtonAction.astro'
-import IconActive from '../icons/IconActive.astro'
+import ButtonAction from "./ButtonAction.astro";
+import IconActive from "../icons/IconActive.astro";
+import IconMenu from "../icons/Menu.astro";
+import IconClose from "../icons/Close.astro";
+import LinksHeader from "./LinksHeader.astro";
+import { socialRed } from "../consts/social";
 ---
+
 <header
-  class="fixed top-1 w-full flex justify-center items-center z-50"
+  id="header"
+  class="fixed top-0 py-2 w-full flex justify-center items-center z-50 text-white  flex-col gap-4 transition-all "
 >
-  <div class="backdrop-blur-sm shadow-2xl bg-opacity-30 bg-black text-white w-10/12 font-medium flex gap-6 py-2 px-4 rounded-full m-auto justify-between items-center">
-    <div class="text-sm flex gap-6">
-      <a href="/">
-        <img class="rounded-full h-6" src="/jt.svg" alt="" />
-      </a>
-      <a href="/#proyectos">Proyectos</a>
-      <a href="/faq">FAQ</a>
-    </div>
-    <div>
-      <ButtonAction
-        text="Disponible"
-        color={1}
-        className="hidden text-xs sm:block"
-        href="https://www.linkedin.com/in/jairotumiri/"
-      >
-        <IconActive />
-      </ButtonAction>
+  <nav class="w-10/12 m-auto flex justify-between items-center py-4 px-6 bg-black rounded-3xl">
+    <a href="/">
+      <h4 class="text-xl family-title font-light">
+        Ja<strong class="text-[#FF003D]">iii</strong>rot
+      </h4>
+    </a>
+    <ul class="flex gap-6 items-center">
+      <li>
+        <ButtonAction
+          text="Disponible"
+          color={0}
+          className="rounded-full outline-[#8538ff]"
+          href="https://www.linkedin.com/in/jairotumiri/"
+        >
+          <IconActive />
+        </ButtonAction>
+      </li>
+      <li>
+        <span
+          id="handleMenu"
+          class="cursor-pointer hover:outline hover:outline-1 hover:outline-[#8538ff]"
+        >
+          <span class="menu-active">
+            <IconMenu />
+          </span>
+          <span class="menu-close hidden">
+            <IconClose />
+          </span>
+        </span>
+      </li>
+    </ul>
+  </nav>
+  <div id="navMobile" class="w-10/12 m-auto py-2 hidden flex-col gap-4">
+    <hr class="border-gray-700" />
+    <ul class="flex flex-col gap-6 items-center w-full py-6">
+      <LinksHeader href="#yo" text="Sobre mi" />
+      <LinksHeader href="#proyectos" text="Proyectos" />
+      <LinksHeader href="#habilidades" text="Habilidades" />
+      <LinksHeader href="#contacto" text="Contacto" />
+    </ul>
+    <hr class="border-gray-700" />
+    <div class="py-4 flex gap-6">
+      {
+        socialRed.map((e) => {
+          return (
+            <a href={e.link} class="text-xs hover:opacity-50" target="_blank">
+              {e.name} ↗︎
+            </a>
+          );
+        })
+      }
     </div>
   </div>
 </header>
+
+<script>
+  let showMenu = false;
+  const handleMenu = document.getElementById("handleMenu");
+  const menuActive = document.querySelector(".menu-active");
+  const menuClose = document.querySelector(".menu-close");
+  const header = document.getElementById("header");
+  const menu = document.getElementById("navMobile");
+  if (handleMenu) {
+    handleMenu.addEventListener("click", () => {
+      showMenu = !showMenu;
+      if (showMenu) {
+        menu?.classList.remove("hidden");
+        menuClose?.classList.remove("hidden");
+        menuActive?.classList.add("hidden");
+        header?.classList.add("bg-black");
+      } else {
+        menuClose?.classList.add("hidden");
+        menu?.classList.add("hidden");
+        menuActive?.classList.remove("hidden");
+        header?.classList.remove("bg-black");
+      }
+    });
+  }
+</script>

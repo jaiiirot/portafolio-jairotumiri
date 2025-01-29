@@ -2,90 +2,174 @@
 import ButtonAction from "../components/ButtonAction.astro";
 import Layout from "../layouts/Layout.astro";
 import IconCv from "../icons/IconCv.astro";
-import IconActive from "../icons/IconActive.astro";
-import IconFlagArg from "../icons/IconFlagArg.astro";
 ---
 
 <Layout title="Jairo Tumiri">
-  <main class="text-white">
-    <section class="flex flex-col justify-center items-center h-screen">
-      <div class="flex flex-col gap-3 text-center font-bold">
-        <h1 class="text-4xl sm:text-7xl family-title">Jairo Tumiri</h1>
-        <h2 class="text-2xl sm:text-4xl">
-          Desarrollador <span
-            class="text-[#FF003D]"
-            style="text-shadow: 2px 2px 15px #ff003d;">Full Stack</span
-          >
-        </h2>
-        <p class="text-xs sm:text-base font-light">
-          Fusionando creatividad y tecnología para ofrecer soluciones que
-          inspiran
-        </p>
-      </div>
-      <hr
-        class="w-6/12 m-3 opacity-15"
-        style=" border-top: 2px dotted white;background: transparent;"
-      />
-      <div class="flex flex-col gap-3 justify-center items-center">
-        <ButtonAction
-          text="Disponible para nuevos proyectos"
-          color={1}
-          className="block text-xs sm:hidden"
-          href="https://www.linkedin.com/in/jairotumiri/"
-        >
-          <IconActive />
-        </ButtonAction>
-        
-        <h3 class="flex justify-center items-center gap-4 text-center text-xs sm:text-base">
-          Me encuentro en Buenos Aires, Argentina
-        </h3>
-        <IconFlagArg />
-        <span class="flex gap-2">⌛<div id="hora"></div>(GMT-3)</span>
-      </div>
-      <hr class="w-6/12 m-3 opacity-15"
-        style=" border-top: 2px dotted white;background: transparent;"
-      />
-      <div class="m-3 flex flex-col gap-4 justify-center items-center sm:flex-row">
-        <ButtonAction
-          text="Descargar Curriculum"
-          color={0}
-          className="text-sm sm:text-lg border border-gray-400"
-          href="https://drive.google.com/file/d/146nRdfRrWB31rr8p5kIuq-pTg0fIJedy/view?usp=sharing"
-        >
-          <IconCv />
-        </ButtonAction>
-        <ButtonAction
-          text="Contactar"
-          color={1}
-          className="text-sm sm:text-lg border"
-          href="?push=form"
+  <main class="text-white mt-24 flex flex-col gap-24">
+    <section class="w-8/12 flex flex-col m-auto ">
+      <div class="flex h-min items-center gap-8">
+        <img
+          class="size-72 rounded-2xl"
+          src="https://avatars.githubusercontent.com/u/86240202?v=4"
+          alt=""
         />
+        <div class="family-title font-bold flex flex-col gap-2">
+          <h1 class="text-6xl">Jairo Tumiri</h1>
+          <h2 class="text-6xl">Desarrollador</h2>
+          <h2
+            class="text-6xl text-[#FF003D]"
+            style="text-shadow: 2px 2px 15px #ff003d;"
+          >
+            Full Stack
+          </h2>
+          <h3 class="text-xl sm:text-base font-light">
+            Fusionando creatividad y tecnología para ofrecer soluciones que
+            inspiran
+          </h3>
+          <div class="flex gap-4 mt-4">
+            <ButtonAction
+              text="Descargar Curriculum"
+              color={0}
+              className="rounded-full text-sm sm:text-lg border border-gray-800"
+              href="https://drive.google.com/file/d/146nRdfRrWB31rr8p5kIuq-pTg0fIJedy/view?usp=sharing"
+            >
+              <IconCv />
+            </ButtonAction>
+            <ButtonAction
+              text="Contactar"
+              color={1}
+              className="rounded-full text-sm sm:text-lg border"
+              href="?push=form"
+            />
+          </div>
+        </div>
       </div>
     </section>
-    <section class="h-screen" id="proyectos">
-      <div>
-        <p>
-          TATO
-        </p>
+    <section class="w-8/12 m-auto">
+      <div
+        class="flex "
+      >
+        <div class="space-y-6 border-l">
+          <div class="relative w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <div class="ml-6">
+              <h4 class="font-bold text-blue-500">Frontend Development.</h4>
+              <p class="mt-2 max-w-screen-sm text-sm text-gray-500">
+                Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor
+                aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in,
+                lobortis ante.
+              </p>
+              <span class="mt-1 block text-sm font-semibold text-blue-500"
+                >2007</span
+              >
+            </div>
+          </div>
+          <div class="relative w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <div class="ml-6">
+              <h4 class="font-bold text-blue-500">Graphic Design.</h4>
+              <p class="mt-2 max-w-screen-sm text-sm text-gray-500">
+                Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis
+                iaculis, feugiat risus quis, aliquet urna. Quisque fringilla
+                mollis risus, eu pulvinar dolor.
+              </p>
+              <span class="mt-1 block text-sm font-semibold text-blue-500"
+                >2007</span
+              >
+            </div>
+          </div>
+          <div class="relative w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <div class="ml-6">
+              <h4 class="font-bold text-blue-500">Lead Ui/Ux Designer.</h4>
+              <p class="mt-2 max-w-screen-sm text-sm text-gray-500">
+                Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis
+                iaculis, feugiat risus quis, aliquet urna. Quisque fringilla
+                mollis risus, eu pulvinar dolor
+              </p>
+              <span class="mt-1 block text-sm font-semibold text-blue-500"
+                >2007</span
+              >
+            </div>
+          </div>
+          <div class="relative w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <div class="ml-6">
+              <h4 class="font-bold text-blue-500">Lead Ui/Ux Designer.</h4>
+              <p class="mt-2 max-w-screen-sm text-sm text-gray-500">
+                Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis
+                iaculis, feugiat risus quis, aliquet urna. Quisque fringilla
+                mollis risus, eu pulvinar dolor
+              </p>
+              <span class="mt-1 block text-sm font-semibold text-blue-500"
+                >2007</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- <section class="w-11/12 m-auto flex flex-col gap-4">
+      <h3>Testimonios</h3>
+      <Testimons />
+    </section> -->
   </main>
-</Layout>
 
-<script>
-  function actualizarHora() {
-    const fechaActual = new Date();
-    const horaArgentina = new Intl.DateTimeFormat("es-AR", {
-      timeZone: "America/Argentina/Buenos_Aires",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false,
-    }).format(fechaActual);
-    const horaElement = document.getElementById("hora");
-    if (horaElement) {
-      horaElement.innerText = horaArgentina;
+  <script>
+    function actualizarHora() {
+      const fechaActual = new Date();
+      const horaArgentina = new Intl.DateTimeFormat("es-AR", {
+        timeZone: "America/Argentina/Buenos_Aires",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      }).format(fechaActual);
+      const horaElement = document.getElementById("hora");
+      if (horaElement) {
+        horaElement.innerText = horaArgentina;
+      }
     }
-  }
-  setInterval(actualizarHora, 1000);
-  actualizarHora();
-</script>
+    setInterval(actualizarHora, 1000);
+    actualizarHora();
+  </script>
+</Layout>

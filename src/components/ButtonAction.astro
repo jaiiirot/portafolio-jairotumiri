@@ -1,9 +1,9 @@
 ---
 interface Props {
-  text: string;
-  color: number;
-  href: string;
-  className: string;
+  text?: string;
+  color?: number;
+  href?: string;
+  className?: string;
 }
 
 const { text, color, href, className } = Astro.props;
@@ -11,7 +11,7 @@ const colors = [
   { bg: "#000", tx: "#fff" },
   { bg: "#fff", tx: "#000" },
 ];
-const { bg, tx } = colors[color];
+const { bg, tx } = colors[color ?? 0];
 ---
 
 <a href={href} target="_blank">
@@ -21,7 +21,7 @@ const { bg, tx } = colors[color];
   >
     <span class=`flex gap-2 justify-center items-center font-semibold`>
       <slot />
-      <p>{text}</p>
+      {text! ? <p>{text}</p> : null}
     </span>
   </button>
 </a>
@@ -30,8 +30,8 @@ const { bg, tx } = colors[color];
   .button-personalized {
     position: relative;
     padding: 6px 12px;
-    border-radius: 6px;
-    color: #fff;
+    /* border-radius: 6px; */
+    /* color: #fff; */
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: all 0.2s ease-in;

@@ -1,0 +1,21 @@
+---
+interface Props {
+  href: string;
+  text: string;
+}
+
+const { href, text } = Astro.props;
+import IconRow from "../icons/Row.astro";
+---
+
+<li class="w-full">
+  <a
+    href={href}
+    class="flex items-center justify-between p-4 rounded-3xl hover:opacity-50"
+  >
+    <span class="font-bold text-4xl">{text}</span>
+    <span class="outline outline-1 outline-gray-400 rounded-full px-6 py-2">
+      <IconRow />
+    </span>
+  </a>
+</li>
