@@ -1,0 +1,42 @@
+---
+import ButtonAction from "../ButtonAction.astro"
+import IconCv from "../../icons/Cv.astro"
+---
+<section class="w-11/12 flex flex-col m-auto">
+  <div class="flex h-min items-center gap-8 mx-auto">
+    <img
+      class="size-72 rounded-2xl"
+      src="https://avatars.githubusercontent.com/u/86240202?v=4"
+      alt=""
+    />
+    <div class="family-title font-bold flex flex-col gap-2">
+      <h1 class="text-6xl">Jairo Tumiri</h1>
+      <h2 class="text-6xl">Desarrollador</h2>
+      <h2
+        class="text-6xl text-[#FF003D]"
+        style="text-shadow: 2px 2px 15px #ff003d;"
+      >
+        Full Stack
+      </h2>
+      <h3 class="text-xl sm:text-base font-light">
+        Fusionando creatividad y tecnología para ofrecer soluciones que inspiran
+      </h3>
+      <div class="flex gap-4 mt-4">
+        <ButtonAction
+          text="Descargar Curriculum"
+          color={0}
+          className="rounded-full text-sm sm:text-lg "
+          href="https://drive.google.com/file/d/146nRdfRrWB31rr8p5kIuq-pTg0fIJedy/view?usp=sharing"
+        >
+          <IconCv />
+        </ButtonAction>
+        <ButtonAction
+          text="Contactar"
+          color={1}
+          className="rounded-full text-sm sm:text-lg border"
+          href="?push=form"
+        />
+      </div>
+    </div>
+  </div>
+</section>

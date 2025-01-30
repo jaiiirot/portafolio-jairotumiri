@@ -9,9 +9,9 @@ import { socialRed } from "../consts/social";
 
 <header
   id="header"
-  class="fixed top-0 py-2 w-full flex justify-center items-center z-50 text-white  flex-col gap-4 transition-all "
+  class="fixed top-0 py-2 w-full flex justify-center items-center z-50 text-white  flex-col gap-4 transition-all duration-75"
 >
-  <nav class="w-10/12 m-auto flex justify-between items-center py-4 px-6 bg-black rounded-3xl">
+  <nav class="w-11/12 m-auto flex justify-between items-center py-4 px-6 rounded-3xl bg-[#0000003d]" style="backdrop-filter: blur(10px);">
     <a href="/">
       <h4 class="text-xl family-title font-light">
         Ja<strong class="text-[#FF003D]">iii</strong>rot
@@ -43,9 +43,9 @@ import { socialRed } from "../consts/social";
       </li>
     </ul>
   </nav>
-  <div id="navMobile" class="w-10/12 m-auto py-2 hidden flex-col gap-4">
+  <div id="navMobile" class="w-10/12 m-auto py-2 hidden flex-col gap-4 transition-all ">
     <hr class="border-gray-700" />
-    <ul class="flex flex-col gap-6 items-center w-full py-6">
+    <ul class="flex flex-col gap-4 items-center w-full py-6">
       <LinksHeader href="#yo" text="Sobre mi" />
       <LinksHeader href="#proyectos" text="Proyectos" />
       <LinksHeader href="#habilidades" text="Habilidades" />
