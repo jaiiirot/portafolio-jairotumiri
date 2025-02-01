@@ -27,7 +27,7 @@ const {
 
   <div class="flex flex-col gap-4 mt-2">
     <div>
-      <p class="text-gray-400 text-sm line-clamp-2 descripcionJobs">{descripcion}</p><span
+      <p class="text-gray-400 text-sm line-clamp-3 text-balance descripcionJobs">{descripcion}</p><span
         class="haddleMasDescripcion">Ver Mas...</span
       >
     </div>
@@ -47,10 +47,10 @@ const {
       const descripcionElement = document.querySelectorAll(".descripcionJobs");
       if (stateMas) {
         e.textContent = "Ver Menos...";
-        descripcionElement[i].classList.remove("line-clamp-2");
+        descripcionElement[i].classList.remove("line-clamp-3");
       }else{
         e.textContent = "Ver Mas..." 
-        descripcionElement[i].classList.add("line-clamp-2");
+        descripcionElement[i].classList.add("line-clamp-3");
       }
     })
     });

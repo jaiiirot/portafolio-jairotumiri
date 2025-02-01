@@ -3,26 +3,28 @@ import CardTimeLine from "../CardTimeLine.astro";
 import { experiencia } from "../../consts/experience";
 ---
 
-<section class="w-11/12 m-auto flex gap-16 my-32">
-  <article class="flex flex-col justify-around w-4/12">
-    <h4
-      class="font-bold family-title text-8xl text-[#FF003D] -rotate-6"
-      style="text-shadow: 2px 2px 15px #ff003c81;"
-    >
-      Experiencia
-    </h4>
-    <p class="text-gray-300 text-sm">
-      He trabajado en proyectos reales y simulados, donde además de programar,
-      he liderado equipos, documentado software y aplicado metodologías ágiles.
-      Actualmente, sigo formándome en ingeniería en sistemas, siempre buscando
-      mejorar y aprender nuevas tecnologías para desarrollar soluciones
-      innovadoras. 🚀
-    </p>
-    <div class="place-items-center overflow-hidden relative">
-      <img src="/planet.gif" alt="" class="size-[250px]" />
+<section class="w-11/12 m-auto flex gap-16 my-32 flex-col sm:flex-row">
+  <article class="flex justify-center items-center flex-col sm:hidden">
+    <div class="">
+      <h4
+        class="font-bold family-title text-xl text-[#FF003D]"
+        style="text-shadow: 2px 2px 15px #ff003c81;"
+      >
+        Experiencia
+      </h4>
     </div>
   </article>
-  <article class="flex w-8/12">
+  <article class="justify-center items-center flex-col hidden sm:flex">
+    <div class="-rotate-90 w-32 flex">
+      <h4
+        class="font-bold family-title text-8xl text-[#FF003D]"
+        style="text-shadow: 2px 2px 15px #ff003c81;"
+      >
+        Experiencia
+      </h4>
+    </div>
+  </article>
+  <article class="flex w-full">
     <div class="py-4 flex flex-col gap-16">
       {experiencia.map((exp) => <CardTimeLine {...exp} />)}
     </div>
