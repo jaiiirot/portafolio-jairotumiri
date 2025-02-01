@@ -9,7 +9,7 @@ const { tecnology, rotate, direction } = Astro.props;
 ---
 
 <div
-  class="slider w-11/12 overflow-hidden flex justify-center my-16"
+  class="slider w-11/12 overflow-hidden flex justify-center my-4 sm:my-16"
   style={`mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
@@ -19,7 +19,7 @@ const { tecnology, rotate, direction } = Astro.props;
   ); transform: rotate(${rotate}deg);`}
 >
   <div
-    class="slide-track font-extrabold text-6xl family-title w-max"
+    class="slide-track font-extrabold  w-max  text-4xl sm:text-6xl"
     class:list={`animate-${direction}`}
   >
     {
@@ -28,7 +28,7 @@ const { tecnology, rotate, direction } = Astro.props;
         .flat()
         .map((lenguaje) => (
           <div class="slide">
-            <p>{lenguaje}</p>
+            <p class="" >{lenguaje}</p>
           </div>
         ))
     }
@@ -58,7 +58,6 @@ const { tecnology, rotate, direction } = Astro.props;
 
   .slider .slide p {
     transition: all 0.3s ease;
-    cursor: cell;
   }
 
   .slider .slide p:hover {
