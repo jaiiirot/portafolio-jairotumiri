@@ -1,42 +1,48 @@
 ---
-import ButtonAction from "../ButtonAction.astro"
-import IconCv from "../../icons/Cv.astro"
+import ButtonAction from "../ButtonAction.astro";
+import IconCv from "../../icons/Cv.astro";
 ---
-<section class="w-11/12 flex flex-col m-auto">
-  <div class="flex h-min items-center gap-8 mx-auto">
-    <img
-      class="size-72 rounded-2xl"
-      src="https://avatars.githubusercontent.com/u/86240202?v=4"
-      alt=""
-    />
-    <div class="family-title font-bold flex flex-col gap-2">
-      <h1 class="text-6xl">Jairo Tumiri</h1>
-      <h2 class="text-6xl">Desarrollador</h2>
-      <h2
-        class="text-6xl text-[#FF003D]"
+
+<section class="w-11/12 flex flex-col m-auto my-32">
+  <div class="family-title flex flex-col gap-4 text-center">
+    <span class="flex gap-4 items-center justify-center">
+      <img src="https://avatars.githubusercontent.com/u/86240202?v=4" alt="" class="size-8 rounded-full" />
+      <h1 class="text-lg font-extralight">¡Un gusto!, Soy Jairo Tumiri</h1>
+    </span>
+    <h2 class="text-8xl font-bold">
+      Desarrollador <span
+        class="text-8xl text-[#FF003D] family-title"
         style="text-shadow: 2px 2px 15px #ff003d;"
       >
         Full Stack
-      </h2>
-      <h3 class="text-xl sm:text-base font-light">
-        Fusionando creatividad y tecnología para ofrecer soluciones que inspiran
-      </h3>
-      <div class="flex gap-4 mt-4">
-        <ButtonAction
-          text="Descargar Curriculum"
-          color={0}
-          className="rounded-full text-sm sm:text-lg "
-          href="https://drive.google.com/file/d/146nRdfRrWB31rr8p5kIuq-pTg0fIJedy/view?usp=sharing"
-        >
-          <IconCv />
-        </ButtonAction>
-        <ButtonAction
-          text="Contactar"
-          color={1}
-          className="rounded-full text-sm sm:text-lg border"
-          href="?push=form"
-        />
-      </div>
+      </span>
+    </h2>
+    <h2 class="text-8xl font-bold">
+      Diseñador <span
+        class="text-8xl text-[#FF003D] family-title"
+        style="text-shadow: 2px 2px 15px #ff003d;"
+        >ui
+      </span>
+    </h2>
+
+    <h3 class="text-xl sm:text-base font-light">
+      Fusionando creatividad y tecnología para ofrecer soluciones que inspiran
+    </h3>
+    <div class="flex gap-4 mt-4 items-center justify-center">
+      <ButtonAction
+        text="Descargar Curriculum"
+        color={0}
+        className="rounded-xl text-sm sm:text-lg "
+        href="https://drive.google.com/file/d/146nRdfRrWB31rr8p5kIuq-pTg0fIJedy/view?usp=sharing"
+      >
+        <IconCv />
+      </ButtonAction>
+      <ButtonAction
+        text="Contactar"
+        color={1}
+        className="rounded-xl text-sm sm:text-lg"
+        href="https://www.linkedin.com/in/jairotumiri/"
+      />
     </div>
   </div>
 </section>

@@ -1,22 +1,58 @@
-<article class="relative w-full hover:opacity-75 cursor-pointer">
+---
+import ButtonAction from "./ButtonAction.astro";
+
+const {
+  titulo,
+  empresa,
+  proyecto,
+  tipoContrato,
+  periodo,
+  descripcion,
+  ubicacion,
+  responsabilidades,
+} = Astro.props;
+---
+
+<article class="relative w-full">
   <hr class="border-gray-600" />
-  <div class="flex gap-8 justify-between items-center mt-2">
-    <div class="flex flex-col gap-4">
-      <h4
-        class="family-title text-2xl font-bold text-gray-200"
-      >
-        Frontend Development.
-      </h4>
-      <p
-      >
-        2007
-      </p>
-    </div>
+  <h4 class="family-title text-3xl font-bold text-gray-200 mt-4">
+    {titulo}
+  </h4>
+  <div class="flex gap-4 w-full mt-2 items-center">
+    <h6 class="text-2xl font-bold">{empresa}</h6>
+    <p class="text-[#FF003D]" style="text-shadow: 2px 2px 15px #ff003c;">
+      {periodo}
+    </p>
+  </div>
+
+  <div class="flex flex-col gap-4 mt-2">
     <div>
-      <p class="mt-2 w-full text-sm text-gray-400">
-        Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam
-        sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis ante.
-      </p>
+      <p class="text-gray-400 text-sm line-clamp-2 descripcionJobs">{descripcion}</p><span
+        class="haddleMasDescripcion">Ver Mas...</span
+      >
+    </div>
+    <div class="flex justify-between gap-4">
+      <p class="text-gray-400 text-xs">{ubicacion} - {tipoContrato}</p>
     </div>
   </div>
 </article>
+
+<script>
+  const leerMasDescripcion = Array.from(document.querySelectorAll(".haddleMasDescripcion"));
+  let stateMas = false;
+  if (leerMasDescripcion) {
+    leerMasDescripcion.forEach((e: Element, i: number) => {
+      e.addEventListener("click", () => {
+      stateMas = !stateMas;
+      const descripcionElement = document.querySelectorAll(".descripcionJobs");
+      if (stateMas) {
+        e.textContent = "Ver Menos...";
+        descripcionElement[i].classList.remove("line-clamp-2");
+      }else{
+        e.textContent = "Ver Mas..." 
+        descripcionElement[i].classList.add("line-clamp-2");
+      }
+    })
+    });
+  }
+</script>

@@ -1,0 +1,86 @@
+---
+interface Props {
+  tecnology: readonly string[];
+  rotate: string;
+  direction: "scrollLeft" | "scrollRight"; // Se restringen valores válidos
+}
+
+const { tecnology, rotate, direction } = Astro.props;
+---
+
+<div
+  class="slider w-11/12 overflow-hidden flex justify-center my-16"
+  style={`mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  ); transform: rotate(${rotate}deg);`}
+>
+  <div
+    class="slide-track font-extrabold text-6xl family-title w-max"
+    class:list={`animate-${direction}`}
+  >
+    {
+      Array(5)
+        .fill(tecnology)
+        .flat()
+        .map((lenguaje) => (
+          <div class="slide">
+            <p>{lenguaje}</p>
+          </div>
+        ))
+    }
+  </div>
+</div>
+
+<style>
+  .slider {
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    transform: skewX(15deg);
+  }
+
+  .slider .slide-track {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .animate-scrollLeft {
+    animation: scrollLeft 80s linear infinite;
+  }
+
+  .animate-scrollRight {
+    animation: scrollRight 80s linear infinite;
+  }
+
+  .slider .slide p {
+    transition: all 0.3s ease;
+    cursor: cell;
+  }
+
+  .slider .slide p:hover {
+    transform: scale(1.1);
+    width: 100%;
+  }
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * 14));
+    }
+  }
+
+  @keyframes scrollRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(200px * 14));
+    }
+  }
+</style>

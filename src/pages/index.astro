@@ -1,14 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Testimons from "../components/sections/Testimons.astro";
-import Experiens from "../components/sections/Experiens.astro";
+import Experience from "../components/sections/Experience.astro";
 import Presentation from "../components/sections/Presentation.astro";
+import Slider from "../components/sections/Slider.astro";
+import { tecnologias } from "../consts/lenguajes";
 ---
 
 <Layout title="Jairo Tumiri">
-  <main class="text-white mt-24 flex flex-col gap-32">
+  <main class="text-white flex flex-col">
     <Presentation />
-    <Experiens />
+    <Slider tecnology={tecnologias.frontEnd} rotate="2.5" direction="scrollLeft" />
+    <Experience />
+    <Slider tecnology={tecnologias.backEnd} rotate="-2.5" direction="scrollRight" />
     <Testimons />
   </main>
 </Layout>
